@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ZcashFoundation/frost/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ZcashFoundation/frost/actions/workflows/main.yml)
 
-| Crate                           |                        | Crates.io                                                                                                           | Documentation                                                                                        |
+| Crate                            |                        | Crates.io                                                                                                           | Documentation                                                                                        |
 | ------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Generic FROST implementation    | [`frost-core`]         | [![crates.io](https://img.shields.io/crates/v/frost-core.svg)](https://crates.io/crates/frost-core)                 | [![Documentation](https://docs.rs/frost-core/badge.svg)](https://docs.rs/frost-core)                 |
 | Ristretto255 ciphersuite        | [`frost-ristretto255`] | [![crates.io](https://img.shields.io/crates/v/frost-ristretto255.svg)](https://crates.io/crates/frost-ristretto255) | [![Documentation](https://docs.rs/frost-ristretto255/badge.svg)](https://docs.rs/frost-ristretto255) |
