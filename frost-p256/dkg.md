@@ -61,6 +61,7 @@ for participant_index in 1..=max_signers {
         max_signers,
         min_signers,
         &mut rng,
+        "0000000000000000000000000000000000000000000000000000000000000001".to_string().as_bytes().to_vec()
     )?;
     # // ANCHOR_END: dkg_part1
 

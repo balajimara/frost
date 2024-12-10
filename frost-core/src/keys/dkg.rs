@@ -284,10 +284,11 @@ pub fn part1<C: Ciphersuite, R: RngCore + CryptoRng>(
     max_signers: u16,
     min_signers: u16,
     mut rng: R,
+    priv_key: Vec<u8>
 ) -> Result<(round1::SecretPackage<C>, round1::Package<C>), Error<C>> {
     validate_num_of_signers::<C>(min_signers, max_signers)?;
 
-    let secret: SigningKey<C> = SigningKey::new(&mut rng);
+    let secret: SigningKey<C> = SigningKey::deserialize(&priv_key).unwrap();
 
     // Round 1, Step 1
     //

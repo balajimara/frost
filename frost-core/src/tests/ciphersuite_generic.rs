@@ -183,6 +183,7 @@ pub fn check_dkg_part1_fails_with_invalid_signers<C: Ciphersuite, R: RngCore + C
         max_signers,
         min_signers,
         &mut rng,
+        "0000000000000000000000000000000000000000000000000000000000000001".to_string().as_bytes().to_vec()
     );
 
     assert!(out.is_err());
@@ -410,7 +411,7 @@ where
     for participant_index in 1..=max_signers {
         let participant_identifier = participant_index.try_into().expect("should be nonzero");
         let (round1_secret_package, round1_package) =
-            frost::keys::dkg::part1(participant_identifier, max_signers, min_signers, &mut rng)
+            frost::keys::dkg::part1(participant_identifier, max_signers, min_signers, &mut rng,         "0000000000000000000000000000000000000000000000000000000000000001".to_string().as_bytes().to_vec())
                 .unwrap();
 
         // Store the participant's secret package for later use.

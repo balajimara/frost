@@ -51,8 +51,9 @@ pub fn part1<R: RngCore + CryptoRng>(
     max_signers: u16,
     min_signers: u16,
     mut rng: R,
+    priv_key: Vec<u8>
 ) -> Result<(round1::SecretPackage, round1::Package), Error> {
-    frost::keys::dkg::part1(identifier, max_signers, min_signers, &mut rng)
+    frost::keys::dkg::part1(identifier, max_signers, min_signers, &mut rng, priv_key)
 }
 
 /// Performs the second part of the distributed key generation protocol for the
